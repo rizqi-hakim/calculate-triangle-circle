@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>Luas Lingkaran</title>
+</head>
+
+<body>
+
+  <h3>Hitung Luas Lingkaran</h3>
+  <form name="luas_lingkaran">
+    <pre>
+      Nilai Jari-jari = <input type="text" name="nilai_jari2" /> 
+    </pre>
+    <input type="button" value="Hitung Sekarang" onClick="luaslingkaran()" />
+    <input type="reset" value="Reset" />
+  </form>
+
+  <h3>Hitung Luas Segitiga</h3>
+  <form name="luas_segitiga">
+    <pre>
+      Nilai Alas = <input type="text" name="nilai_alas" />
+    </pre>
+    <pre>
+      Nilai Tinggi = <input type="text" name="nilai_tinggi" />
+    </pre>
+    <input type="button" value="Hitung Sekarang" onClick="luassegitiga()" />
+    <input type="reset" value="Reset" />
+  </form>
+
+  <script language="javascript">
+    function luaslingkaran() {
+      var jari2 = parseFloat(document.luas_lingkaran.nilai_jari2.value);
+      if (isNaN(jari2)) {
+        jari2 = 0.0;
+      }
+      var hasil = 3.14 * jari2 * jari2;
+      alert("Jadi, luas lingkaran adalah : " + hasil);
+    }
+
+    function luassegitiga() {
+      var alas = parseFloat(document.luas_segitiga.nilai_alas.value);
+      var tinggi = parseFloat(document.luas_segitiga.nilai_tinggi.value);
+      if (isNaN(alas)) {
+        alas = 0.0;
+      }
+
+      if (isNaN(tinggi)) {
+        tinggi = 0.0;
+      }
+      var hasil = 0.5 * alas * tinggi;
+      alert("Jadi, luas segitiga adalah : " + hasil);
+    }
+  </script>
+
+
+</body>
+
+</html>
